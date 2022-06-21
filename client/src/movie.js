@@ -15,7 +15,7 @@ const setVoteClass=(vote)=>{
 
 function Movie({title,poster_path,overview,vote_average}){
     const handleClick = async(e)=>{
-            const res = await axios.post("http://localhost:1000/api/favs",{
+            const res = await axios.post("/api/favs",{
                userid:"100",
                title:title,
                poster_path:poster_path,
