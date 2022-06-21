@@ -131,7 +131,7 @@ function SignUp() {
             }
             else{
               handleClick1()
-              navigate("/signIn")
+              navigate("/login")
 
             }
           }).catch((error)=>{
