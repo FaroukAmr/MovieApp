@@ -122,7 +122,7 @@ function SignUp() {
         }
 
         if(emailErrorHelper==="" && passwordErrorHelper===""&& confirmpasswordErrorHelper===""&& usernameErrorHelper===""){
-          axios.post('http://localhost:1000/api/users', {username:username, email: email, password: password })
+          axios.post('/api/users', {username:username, email: email, password: password })
           .then((response)=>{
             if (response.data.message!="User created successfully") {
               handleClick2()

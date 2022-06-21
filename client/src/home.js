@@ -21,7 +21,7 @@ function Home() {
   const navigate = useNavigate();
   const handleClick = async(title,poster_path,overview,vote_average)=>{
     console.log(id,title,poster_path,overview,vote_average)
-    const res = await axios.post("http://localhost:1000/api/favs",{
+    const res = await axios.post("/api/favs",{
        userid:id,
        title:title,
        poster_path:poster_path,
@@ -101,6 +101,8 @@ const handleLogOut=()=>{
       getMovies(SEARCH_API+searchTerm)
 
     setsearchTerm('');
+  }else{
+    getMovies(FEATURED_API)
   }
   }
   const handleChange=(e)=>{

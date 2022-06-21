@@ -22,7 +22,7 @@ function Favs(){
     
   const [searchTerm,setsearchTerm]=useState('')
     const handleClick = async(title,poster_path,overview,vote_average)=>{
-        const res = await axios.delete("http://localhost:1000/api/favs",{
+        const res = await axios.delete("/api/favs",{
             params:{
                 userid:value,
                 title:title
@@ -59,7 +59,7 @@ function Favs(){
     const [movies,setMovies]=useState([''])
    
       const allData = async()=>{
-         let res = await axios.get("http://localhost:1000/api/favs",{
+         let res = await axios.get("/api/favs",{
             params:{
                 userid:id
             }

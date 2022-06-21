@@ -101,7 +101,7 @@ function SignIn() {
         }
 
         if(email!='' && password!=''){
-          axios.post('http://localhost:1000/api/auth', { email: email, password: password })
+          axios.post('/api/auth', { email: email, password: password })
           .then((response)=>{
             if (response.data.message!="logged in successfully") {
               handleClick2()
