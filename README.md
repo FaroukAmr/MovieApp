@@ -1,4 +1,2 @@
-# MovieApp
-
-# Link To Deployment
+# Deployment
 https://movieappmern.herokuapp.com/
