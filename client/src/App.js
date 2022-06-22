@@ -5,8 +5,7 @@ import Home from './home.js'
 import Favs from './favs.js'
 import { Routes, Route } from "react-router-dom"
 import { BrowserRouter } from 'react-router-dom';
-import { UserContext,useMemo } from "./usercontext.js";
-
+import { UserContext} from "./usercontext.js";
 
 const App = ()=>{
    const [value,setValue] = useState('')
@@ -18,21 +17,14 @@ const App = ()=>{
         <BrowserRouter>
         <UserContext.Provider value={{value,setValue}}>
         <Routes>   
-            
           <Route exact path="/" element={ <Home/> } />
           <Route  path="*" element={ <Home/> } />
           <Route exact path="/signUp" element={ <SignUp/> } />
           <Route exact path="/favorites" element={ <Favs/> } />
-          <Route exact path="/login" element={ <SignIn/> } />
-          
-          
+          <Route exact path="/login" element={ <SignIn/> } />     
         </Routes>
         </UserContext.Provider>
-        
         </BrowserRouter>
-        
-        
-
     )
 }
 
